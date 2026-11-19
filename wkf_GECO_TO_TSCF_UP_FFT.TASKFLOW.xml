@@ -1,0 +1,692 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>tdxsnCmp6oIuQaa-gt-27841433-2026-09-04T14:26:39.317Z::tf.xml</types1:EntryId>
+      <types1:Name>wkf_GECO_TO_TSCF_UP_FFT</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description>Workflow process to get data from GECO to TSCF_UP</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>aditya.amberkar_tcs</types1:CreatedBy>
+      <types1:CreationDate>2026-09-04T14:26:39Z</types1:CreationDate>
+      <types1:ModifiedBy>aditya.amberkar_tcs</types1:ModifiedBy>
+      <types1:ModificationDate>2026-09-07T09:55:46Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   xmlns:ns2="http://informatica.com/HumanTask/2022/12/schema/model/humanTaskCommon.xsd"
+                   GUID="ad4fRNQfcKPbSNUh1PwOwZ"
+                   displayName="wkf_GECO_TO_TSCF_UP_FFT"
+                   name="wkf_GECO_TO_TSCF_UP_FFT"
+                   overrideAPIName="false">
+            <appliesTo/>
+            <description>Workflow process to get data from GECO to TSCF_UP</description>
+            <tags/>
+            <generator>PC2Cloud Workflow Converter v1</generator>
+            <input>
+               <parameter name="wkfp_GESTSEP_POS_FIELD1" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_FVO_IAS_CTV_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_CIV_POS_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_GRP_IAS_CTV_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_HTM_IAS_POS_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_TR_IAS_PRICE_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_CIV_PRICE_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_TR_IAS_CTV_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_AFS_IAS_POS_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_AFS_IAS_CTV_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_GESTSEP_PRICE_FIELD1" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_LR_IAS_POS_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_HTM_IAS_PRICE_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_NumOfRecords" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_JobType" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_HTM_IAS_CTV_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_GRP_IAS_POS_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_AFS_IAS_PRICE_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_Reset" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_GESTSEP_POS_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_LR_IAS_PRICE_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_LR_IAS_CTV_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_TR_IAS_POS_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_ID_TYPE" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_Filename" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_Version" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_CIV_POS_FIELD1" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_CIV_PRICE_FIELD1" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_JOB_Number" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_CIV_HIST_PRICE_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_CIV_HIST_PRICE_FIELD1" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_FVO_IAS_PRICE_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_FVO_IAS_POS_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_GRP_IAS_PRICE_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_GESTSEP_PRICE_FIELD" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="InputMappingTaskParameterFileDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="InputMappingTaskParameterFileName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <tempFields>
+               <field description="" name="s_m_Call_Insert_FF_Job" type="reference">
+                  <options>
+                     <option name="failOnNotRun">true</option>
+                     <option name="failOnFault">true</option>
+                     <option name="referenceTo">$po:s-m-Call-Insert-FF-Job</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+               <field description="" name="S_GECO_TSCF" type="reference">
+                  <options>
+                     <option name="failOnNotRun">true</option>
+                     <option name="failOnFault">true</option>
+                     <option name="referenceTo">$po:S-GECO-TSCF</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+               <field description="" name="PMBadFileDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMCacheDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMExtProcDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMFailureEmailUser" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMFolderName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">util:getAssetLocation()</option>
+                  </options>
+               </field>
+               <field description="" name="PMIntegrationServiceName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMLookupFileDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMRepositoryServiceName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMRepositoryUserName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">util:getUserName()</option>
+                  </options>
+               </field>
+               <field description="" name="PMRootDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMSessionLogDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMSessionRunMode" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMSourceFileDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMStorageDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMSuccessEmailUser" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMTargetFileDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMTempDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMWorkflowLogDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMWorkflowName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">util:getAssetName()</option>
+                  </options>
+               </field>
+               <field description="" name="PMWorkflowRunId" type="int">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">util:getProcessId()</option>
+                  </options>
+               </field>
+               <field description="" name="PMWorkflowRunInstanceName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="SYSDATE" type="datetime">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">fn:current-date()</option>
+                  </options>
+               </field>
+               <field description="" name="WORKFLOWSTARTTIME" type="datetime">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">util:getInstanceStartTime()</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowedGroups>
+                     <group>CDI_TFlow_API_group</group>
+                  </allowedGroups>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <title>Start</title>
+                  <link id="m377k6jh" targetId="m377k6jf"/>
+               </start>
+               <assignment id="m377k6jf">
+                  <title>Assignment_PC_Variables</title>
+                  <operation source="constant" to="temp.PMBadFileDir"/>
+                  <operation source="constant" to="temp.PMCacheDir"/>
+                  <operation source="constant" to="temp.PMExtProcDir"/>
+                  <operation source="constant" to="temp.PMFailureEmailUser"/>
+                  <operation source="formula" to="temp.PMFolderName">
+                     <expression language="XQuery">util:getAssetLocation()</expression>
+                  </operation>
+                  <operation source="constant" to="temp.PMIntegrationServiceName"/>
+                  <operation source="constant" to="temp.PMLookupFileDir"/>
+                  <operation source="constant" to="temp.PMRepositoryServiceName"/>
+                  <operation source="formula" to="temp.PMRepositoryUserName">
+                     <expression language="XQuery">util:getUserName()</expression>
+                  </operation>
+                  <operation source="constant" to="temp.PMRootDir"/>
+                  <operation source="constant" to="temp.PMSessionLogDir"/>
+                  <operation source="constant" to="temp.PMSessionRunMode"/>
+                  <operation source="constant" to="temp.PMSourceFileDir"/>
+                  <operation source="constant" to="temp.PMStorageDir"/>
+                  <operation source="constant" to="temp.PMSuccessEmailUser"/>
+                  <operation source="constant" to="temp.PMTargetFileDir"/>
+                  <operation source="constant" to="temp.PMTempDir"/>
+                  <operation source="constant" to="temp.PMWorkflowLogDir"/>
+                  <operation source="formula" to="temp.PMWorkflowName">
+                     <expression language="XQuery">util:getAssetName()</expression>
+                  </operation>
+                  <operation source="formula" to="temp.PMWorkflowRunId">
+                     <expression language="XQuery">util:getProcessId()</expression>
+                  </operation>
+                  <operation source="constant" to="temp.PMWorkflowRunInstanceName"/>
+                  <operation source="formula" to="temp.SYSDATE">
+                     <expression language="XQuery">fn:current-date()</expression>
+                  </operation>
+                  <operation source="formula" to="temp.WORKFLOWSTARTTIME">
+                     <expression language="XQuery">util:getInstanceStartTime()</expression>
+                  </operation>
+                  <link id="m377k6ji" targetId="m377k6je"/>
+               </assignment>
+               <assignment id="m377k6je">
+                  <title>Assignment_Workflow_Variables</title>
+                  <operation source="formula" to="input.wkfp_Reset">
+                     <expression language="XQuery">if (util:isNull($input.wkfp_Reset) or fn:empty($input.wkfp_Reset)) then (0) else ($input.wkfp_Reset)</expression>
+                  </operation>
+                  <link id="m377k6jj" targetId="m377k6jd"/>
+               </assignment>
+               <assignment id="m377k6jd">
+                  <title>Assignment_PC_Workflow_Parameter_File</title>
+                  <operation source="formula" to="input.InputMappingTaskParameterFileDir">
+                     <expression language="XQuery">if (fn:empty($input.InputMappingTaskParameterFileDir)) then '' else $input.InputMappingTaskParameterFileDir</expression>
+                  </operation>
+                  <operation source="formula" to="input.InputMappingTaskParameterFileName">
+                     <expression language="XQuery">if (fn:empty($input.InputMappingTaskParameterFileName)) then '' else $input.InputMappingTaskParameterFileName</expression>
+                  </operation>
+                  <link id="m377k6jk" targetId="m377k6j8"/>
+               </assignment>
+               <eventContainer id="m377k6j8">
+                  <service id="m377k6j9">
+                     <title>S_GECO_TSCF</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Task Name" source="constant" updatable="true">S_GECO_TSCF</parameter>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">1P1XzcrMabPgsGxpRWTO4C</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="S-GECO-TSCF">temp.S_GECO_TSCF</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_ID_TYPE">input.wkfp_ID_TYPE</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_NumOfRecords">input.wkfp_Reset</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_AFS_IAS_CTV_FIELD">input.wkfp_AFS_IAS_CTV_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_AFS_IAS_POS_FIELD">input.wkfp_AFS_IAS_POS_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_AFS_IAS_PRICE_FIELD">input.wkfp_AFS_IAS_PRICE_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_GESTSEP_PRICE_FIELD">input.wkfp_GESTSEP_PRICE_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_GESTSEP_PRICE_FIELD1">input.wkfp_GESTSEP_PRICE_FIELD1</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_GESTSEP_POS_FIELD">input.wkfp_GESTSEP_POS_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_GESTSEP_POS_FIELD1">input.wkfp_GESTSEP_POS_FIELD1</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_CIV_PRICE_FIELD">input.wkfp_CIV_PRICE_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_CIV_PRICE_FIELD1">input.wkfp_CIV_PRICE_FIELD1</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_CIV_POS_FIELD">input.wkfp_CIV_POS_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_CIV_POS_FIELD1">input.wkfp_CIV_POS_FIELD1</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_CIV_HIST_PRICE_FIELD">input.wkfp_CIV_HIST_PRICE_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_CIV_HIST_PRICE_FIELD1">input.wkfp_CIV_HIST_PRICE_FIELD1</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_FVO_IAS_PRICE_FIELD">input.wkfp_FVO_IAS_PRICE_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_FVO_IAS_POS_FIELD">input.wkfp_FVO_IAS_POS_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_FVO_IAS_CTV_FIELD">input.wkfp_FVO_IAS_CTV_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_GRP_IAS_PRICE_FIELD">input.wkfp_GRP_IAS_PRICE_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_GRP_IAS_POS_FIELD">input.wkfp_GRP_IAS_POS_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_GRP_IAS_CTV_FIELD">input.wkfp_GRP_IAS_CTV_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_HTM_IAS_PRICE_FIELD">input.wkfp_HTM_IAS_PRICE_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_HTM_IAS_POS_FIELD">input.wkfp_HTM_IAS_POS_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_HTM_IAS_CTV_FIELD">input.wkfp_HTM_IAS_CTV_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_LR_IAS_PRICE_FIELD">input.wkfp_LR_IAS_PRICE_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_LR_IAS_POS_FIELD">input.wkfp_LR_IAS_POS_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_LR_IAS_CTV_FIELD">input.wkfp_LR_IAS_CTV_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_TR_IAS_PRICE_FIELD">input.wkfp_TR_IAS_PRICE_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_TR_IAS_POS_FIELD">input.wkfp_TR_IAS_POS_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/inout[1]/map_TR_IAS_CTV_FIELD">input.wkfp_TR_IAS_CTV_FIELD</operation>
+                           <operation source="field" to="S-GECO-TSCF/taskProperties[1]/parameterFileDir">input.InputMappingTaskParameterFileDir</operation>
+                           <operation source="field"
+                                      to="temp.S_GECO_TSCF[1]/taskProperties[1]/parameterFileDir">input.InputMappingTaskParameterFileDir</operation>
+                           <operation source="field" to="S-GECO-TSCF/taskProperties[1]/parameterFileName">input.InputMappingTaskParameterFileName</operation>
+                           <operation source="field"
+                                      to="temp.S_GECO_TSCF[1]/taskProperties[1]/parameterFileName">input.InputMappingTaskParameterFileName</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.S_GECO_TSCF/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/output/FirstErrorCode">First Error Code</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_JOB_Number">map_JOB_Number</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_ID_TYPE">map_ID_TYPE</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_AFS_IAS_PRICE_FIELD">map_AFS_IAS_PRICE_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_AFS_IAS_POS_FIELD">map_AFS_IAS_POS_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_AFS_IAS_CTV_FIELD">map_AFS_IAS_CTV_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_GESTSEP_PRICE_FIELD">map_GESTSEP_PRICE_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_GESTSEP_POS_FIELD">map_GESTSEP_POS_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_CIV_PRICE_FIELD">map_CIV_PRICE_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_CIV_POS_FIELD">map_CIV_POS_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_CIV_HIST_PRICE_FIELD">map_CIV_HIST_PRICE_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_FVO_IAS_PRICE_FIELD">map_FVO_IAS_PRICE_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_FVO_IAS_POS_FIELD">map_FVO_IAS_POS_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_FVO_IAS_CTV_FIELD">map_FVO_IAS_CTV_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_GRP_IAS_PRICE_FIELD">map_GRP_IAS_PRICE_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_GRP_IAS_POS_FIELD">map_GRP_IAS_POS_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_GRP_IAS_CTV_FIELD">map_GRP_IAS_CTV_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_HTM_IAS_PRICE_FIELD">map_HTM_IAS_PRICE_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_HTM_IAS_POS_FIELD">map_HTM_IAS_POS_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_HTM_IAS_CTV_FIELD">map_HTM_IAS_CTV_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_LR_IAS_PRICE_FIELD">map_LR_IAS_PRICE_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_LR_IAS_POS_FIELD">map_LR_IAS_POS_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_LR_IAS_CTV_FIELD">map_LR_IAS_CTV_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_TR_IAS_PRICE_FIELD">map_TR_IAS_PRICE_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_TR_IAS_POS_FIELD">map_TR_IAS_POS_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_TR_IAS_CTV_FIELD">map_TR_IAS_CTV_FIELD</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_GESTSEP_PRICE_FIELD1">map_GESTSEP_PRICE_FIELD1</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_GESTSEP_POS_FIELD1">map_GESTSEP_POS_FIELD1</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_CIV_PRICE_FIELD1">map_CIV_PRICE_FIELD1</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_CIV_POS_FIELD1">map_CIV_POS_FIELD1</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_CIV_HIST_PRICE_FIELD1">map_CIV_HIST_PRICE_FIELD1</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_NumOfRecords">map_NumOfRecords</operation>
+                        <operation source="field" to="temp.S_GECO_TSCF/inout/map_JobType">map_JobType</operation>
+                     </serviceOutput>
+                  </service>
+                  <flow id="m377k6jx">
+                     <assignment id="m377k6jw">
+                        <title>Post_Session_Success_Variable_Assignment_S_GECO_TSCF</title>
+                        <operation source="field" to="input.wkfp_JOB_Number">temp.S_GECO_TSCF[1]/inout[1]/map_JOB_Number</operation>
+                        <operation source="field" to="input.wkfp_NumOfRecords">temp.S_GECO_TSCF[1]/inout[1]/map_NumOfRecords</operation>
+                     </assignment>
+                     <link id="m377k6jy" targetId="m377k6j8" type="containerLink"/>
+                  </flow>
+                  <link id="m377k6jt" targetId="m377k6jm"/>
+                  <link id="m377k6jz" targetId="m377k6jx" type="containerLink"/>
+                  <events>
+                     <catch faultField="temp.S_GECO_TSCF/fault"
+                            id="m377k6ja"
+                            interrupting="true"
+                            name="error"/>
+                     <catch faultField="temp.S_GECO_TSCF/fault"
+                            id="m377k6jb"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <container id="m377k6jm" type="exclusive">
+                  <title>Link_Condition_m377k6jl</title>
+                  <flow id="m377k6jo">
+                     <eventContainer id="m377k6j4">
+                        <service id="m377k6j5">
+                           <title>s_m_Call_Insert_FF_Job</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Task Name" source="constant" updatable="true">s_m_Call_Insert_FF_Job</parameter>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">bT1hmLd5Kevj4LqQCM93uT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="s-m-Call-Insert-FF-Job">temp.s_m_Call_Insert_FF_Job</operation>
+                                 <operation source="field" to="s-m-Call-Insert-FF-Job/inout[1]/map_NumOfRecords">input.wkfp_NumOfRecords</operation>
+                                 <operation source="field" to="s-m-Call-Insert-FF-Job/inout[1]/map_JobNumber">input.wkfp_JOB_Number</operation>
+                                 <operation source="field" to="s-m-Call-Insert-FF-Job/inout[1]/map_JobType">input.wkfp_JobType</operation>
+                                 <operation source="field"
+                                            to="s-m-Call-Insert-FF-Job/taskProperties[1]/parameterFileDir">input.InputMappingTaskParameterFileDir</operation>
+                                 <operation source="field"
+                                            to="temp.s_m_Call_Insert_FF_Job[1]/taskProperties[1]/parameterFileDir">input.InputMappingTaskParameterFileDir</operation>
+                                 <operation source="field"
+                                            to="s-m-Call-Insert-FF-Job/taskProperties[1]/parameterFileName">input.InputMappingTaskParameterFileName</operation>
+                                 <operation source="field"
+                                            to="temp.s_m_Call_Insert_FF_Job[1]/taskProperties[1]/parameterFileName">input.InputMappingTaskParameterFileName</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.s_m_Call_Insert_FF_Job/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.s_m_Call_Insert_FF_Job/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.s_m_Call_Insert_FF_Job/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.s_m_Call_Insert_FF_Job/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.s_m_Call_Insert_FF_Job/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.s_m_Call_Insert_FF_Job/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.s_m_Call_Insert_FF_Job/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.s_m_Call_Insert_FF_Job/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.s_m_Call_Insert_FF_Job/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.s_m_Call_Insert_FF_Job/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field"
+                                         to="temp.s_m_Call_Insert_FF_Job/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.s_m_Call_Insert_FF_Job/output/Error_Message">Error Message</operation>
+                              <operation source="field" to="temp.s_m_Call_Insert_FF_Job/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field" to="temp.s_m_Call_Insert_FF_Job/output/FirstErrorCode">First Error Code</operation>
+                              <operation source="field" to="temp.s_m_Call_Insert_FF_Job/inout/map_NumOfRecords">map_NumOfRecords</operation>
+                              <operation source="field" to="temp.s_m_Call_Insert_FF_Job/inout/map_JobNumber">map_JobNumber</operation>
+                              <operation source="field" to="temp.s_m_Call_Insert_FF_Job/inout/map_JobType">map_JobType</operation>
+                           </serviceOutput>
+                        </service>
+                        <events>
+                           <catch faultField="temp.s_m_Call_Insert_FF_Job/fault"
+                                  id="m377k6j6"
+                                  interrupting="true"
+                                  name="error"/>
+                           <catch faultField="temp.s_m_Call_Insert_FF_Job/fault"
+                                  id="m377k6j7"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="m377k6jn" targetId="m377k6jm" type="containerLink"/>
+                  </flow>
+                  <flow id="m377k6jq">
+                     <link id="m377k6jp" targetId="m377k6jm" type="containerLink"/>
+                  </flow>
+                  <link id="m377k6jr" targetId="m377k6jo" type="containerLink">
+                     <condition source="formula">
+                        <function name="string-equals">
+                           <arg name="left" source="formula">{xs:integer($temp.S_GECO_TSCF[1]/output[1]/Task_Status = '1' and $input.wkfp_NumOfRecords &gt; 0)}</arg>
+                           <arg name="right">1</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="m377k6js" targetId="m377k6jq" type="containerLink"/>
+                  <link id="m377k6jv" targetId="c"/>
+               </container>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              xmlns:processObject="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="S-GECO-TSCF"
+                              isByCopy="true"
+                              name="S-GECO-TSCF">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Input Parameters" name="input" type="reference"/>
+                     <field label="InOut Parameters" name="inout" type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            type="reference"/>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              xmlns:processObject="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-m-Call-Insert-FF-Job"
+                              isByCopy="true"
+                              name="s-m-Call-Insert-FF-Job">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Input Parameters" name="input" type="reference"/>
+                     <field label="InOut Parameters" name="inout" type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            type="reference"/>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>ad4fRNQfcKPbSNUh1PwOwZ</types1:GUID>
+      <types1:DisplayName>wkf_GECO_TO_TSCF_UP_FFT</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2026-11-13T05:36:10.258Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

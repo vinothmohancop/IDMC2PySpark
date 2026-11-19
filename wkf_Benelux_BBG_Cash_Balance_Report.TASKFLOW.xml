@@ -1,0 +1,389 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>qYXPiciT6sFsdsF-gt-27414000-2026-09-04T13:16:46.261Z::tf.xml</types1:EntryId>
+      <types1:Name>wkf_Benelux_BBG_Cash_Balance_Report</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description>Change History:&#xD;
+---------------------------------------------------------------------------------------------------------------------------&#xD;
+Developer          			Date                     		Change Description&#xD;
+Shafiwolla shaik           16-07-2019                       This workflow extracts cash balances for Benelux accounts from ML.dbo.CASH_DOWN table. </types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>aditya.amberkar_tcs</types1:CreatedBy>
+      <types1:CreationDate>2026-09-04T13:16:46Z</types1:CreationDate>
+      <types1:ModifiedBy>aditya.amberkar_tcs</types1:ModifiedBy>
+      <types1:ModificationDate>2026-09-18T15:23:27Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   xmlns:ns2="http://informatica.com/HumanTask/2022/12/schema/model/humanTaskCommon.xsd"
+                   GUID="auovSgcFEaHfNCS11JNEOr"
+                   displayName="wkf_Benelux_BBG_Cash_Balance_Report"
+                   name="wkf_Benelux_BBG_Cash_Balance_Report"
+                   overrideAPIName="false">
+            <appliesTo/>
+            <description>Change History:&#xD;
+---------------------------------------------------------------------------------------------------------------------------&#xD;
+Developer          			Date                     		Change Description&#xD;
+Shafiwolla shaik           16-07-2019                       This workflow extracts cash balances for Benelux accounts from ML.dbo.CASH_DOWN table. </description>
+            <tags/>
+            <generator>PC2Cloud Workflow Converter v1</generator>
+            <input>
+               <parameter name="wkfp_Email" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="wkfp_TgtFile_Path" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="InputMappingTaskParameterFileDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter name="InputMappingTaskParameterFileName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <tempFields>
+               <field description=""
+                      name="s_m_Benelux_BBG_Cash_Balance_Report"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:s-m-Benelux-BBG-Cash-Balance-Report</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+               <field description="" name="PMBadFileDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMCacheDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMExtProcDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMFailureEmailUser" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMFolderName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">util:getAssetLocation()</option>
+                  </options>
+               </field>
+               <field description="" name="PMIntegrationServiceName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMLookupFileDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMRepositoryServiceName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMRepositoryUserName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">util:getUserName()</option>
+                  </options>
+               </field>
+               <field description="" name="PMRootDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMSessionLogDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMSessionRunMode" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMSourceFileDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMStorageDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMSuccessEmailUser" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMTargetFileDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMTempDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMWorkflowLogDir" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="PMWorkflowName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">util:getAssetName()</option>
+                  </options>
+               </field>
+               <field description="" name="PMWorkflowRunId" type="int">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">util:getProcessId()</option>
+                  </options>
+               </field>
+               <field description="" name="PMWorkflowRunInstanceName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue"/>
+                  </options>
+               </field>
+               <field description="" name="SYSDATE" type="datetime">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">fn:current-date()</option>
+                  </options>
+               </field>
+               <field description="" name="WORKFLOWSTARTTIME" type="datetime">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">util:getInstanceStartTime()</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowedGroups>
+                     <group>CDI_TFlow_API_group</group>
+                  </allowedGroups>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <title>Start</title>
+                  <link id="m3gymk9j" targetId="m3gymk9h"/>
+               </start>
+               <assignment id="m3gymk9h">
+                  <title>Assignment_PC_Variables</title>
+                  <operation source="constant" to="temp.PMBadFileDir"/>
+                  <operation source="constant" to="temp.PMCacheDir"/>
+                  <operation source="constant" to="temp.PMExtProcDir"/>
+                  <operation source="constant" to="temp.PMFailureEmailUser"/>
+                  <operation source="formula" to="temp.PMFolderName">
+                     <expression language="XQuery">util:getAssetLocation()</expression>
+                  </operation>
+                  <operation source="constant" to="temp.PMIntegrationServiceName"/>
+                  <operation source="constant" to="temp.PMLookupFileDir"/>
+                  <operation source="constant" to="temp.PMRepositoryServiceName"/>
+                  <operation source="formula" to="temp.PMRepositoryUserName">
+                     <expression language="XQuery">util:getUserName()</expression>
+                  </operation>
+                  <operation source="constant" to="temp.PMRootDir"/>
+                  <operation source="constant" to="temp.PMSessionLogDir"/>
+                  <operation source="constant" to="temp.PMSessionRunMode"/>
+                  <operation source="constant" to="temp.PMSourceFileDir"/>
+                  <operation source="constant" to="temp.PMStorageDir"/>
+                  <operation source="constant" to="temp.PMSuccessEmailUser"/>
+                  <operation source="constant" to="temp.PMTargetFileDir"/>
+                  <operation source="constant" to="temp.PMTempDir"/>
+                  <operation source="constant" to="temp.PMWorkflowLogDir"/>
+                  <operation source="formula" to="temp.PMWorkflowName">
+                     <expression language="XQuery">util:getAssetName()</expression>
+                  </operation>
+                  <operation source="formula" to="temp.PMWorkflowRunId">
+                     <expression language="XQuery">util:getProcessId()</expression>
+                  </operation>
+                  <operation source="constant" to="temp.PMWorkflowRunInstanceName"/>
+                  <operation source="formula" to="temp.SYSDATE">
+                     <expression language="XQuery">fn:current-date()</expression>
+                  </operation>
+                  <operation source="formula" to="temp.WORKFLOWSTARTTIME">
+                     <expression language="XQuery">util:getInstanceStartTime()</expression>
+                  </operation>
+                  <link id="m3gymk9k" targetId="m3gymk9f"/>
+               </assignment>
+               <assignment id="m3gymk9f">
+                  <title>Assignment_PC_Workflow_Parameter_File</title>
+                  <operation source="formula" to="input.InputMappingTaskParameterFileDir">
+                     <expression language="XQuery">if (fn:empty($input.InputMappingTaskParameterFileDir)) then '/opt/app/ml_service_sq/params/' else $input.InputMappingTaskParameterFileDir</expression>
+                  </operation>
+                  <operation source="formula" to="input.InputMappingTaskParameterFileName">
+                     <expression language="XQuery">if (fn:empty($input.InputMappingTaskParameterFileName)) then 'Benelux_BBG_Cash_Balance_Report.prm' else $input.InputMappingTaskParameterFileName</expression>
+                  </operation>
+                  <link id="m3gymk9m" targetId="m3gymk9a"/>
+               </assignment>
+               <eventContainer id="m3gymk9a">
+                  <service id="m3gymk9b">
+                     <title>s_m_Benelux_BBG_Cash_Balance_Report</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Task Name" source="constant" updatable="true">s_m_Benelux_BBG_Cash_Balance_Report</parameter>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">86400</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">313w0KpSDXNaZM8mJo1Rao</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="s-m-Benelux-BBG-Cash-Balance-Report">temp.s_m_Benelux_BBG_Cash_Balance_Report</operation>
+                           <operation source="field"
+                                      to="s-m-Benelux-BBG-Cash-Balance-Report/taskProperties[1]/parameterFileDir">input.InputMappingTaskParameterFileDir</operation>
+                           <operation source="field"
+                                      to="temp.s_m_Benelux_BBG_Cash_Balance_Report[1]/taskProperties[1]/parameterFileDir">input.InputMappingTaskParameterFileDir</operation>
+                           <operation source="field"
+                                      to="s-m-Benelux-BBG-Cash-Balance-Report/taskProperties[1]/parameterFileName">input.InputMappingTaskParameterFileName</operation>
+                           <operation source="field"
+                                      to="temp.s_m_Benelux_BBG_Cash_Balance_Report[1]/taskProperties[1]/parameterFileName">input.InputMappingTaskParameterFileName</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field"
+                                   to="temp.s_m_Benelux_BBG_Cash_Balance_Report/output/Run_Id">Run Id</operation>
+                        <operation source="field"
+                                   to="temp.s_m_Benelux_BBG_Cash_Balance_Report/output/Start_Time">Start Time</operation>
+                        <operation source="field"
+                                   to="temp.s_m_Benelux_BBG_Cash_Balance_Report/output/End_Time">End Time</operation>
+                        <operation source="field"
+                                   to="temp.s_m_Benelux_BBG_Cash_Balance_Report/output/Object_Name">Object Name</operation>
+                        <operation source="field"
+                                   to="temp.s_m_Benelux_BBG_Cash_Balance_Report/output/Log_Id">Log Id</operation>
+                        <operation source="field"
+                                   to="temp.s_m_Benelux_BBG_Cash_Balance_Report/output/Task_Id">Task Id</operation>
+                        <operation source="field"
+                                   to="temp.s_m_Benelux_BBG_Cash_Balance_Report/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.s_m_Benelux_BBG_Cash_Balance_Report/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.s_m_Benelux_BBG_Cash_Balance_Report/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.s_m_Benelux_BBG_Cash_Balance_Report/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.s_m_Benelux_BBG_Cash_Balance_Report/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.s_m_Benelux_BBG_Cash_Balance_Report/output/Error_Message">Error Message</operation>
+                        <operation source="field"
+                                   to="temp.s_m_Benelux_BBG_Cash_Balance_Report/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field"
+                                   to="temp.s_m_Benelux_BBG_Cash_Balance_Report/output/FirstErrorCode">First Error Code</operation>
+                        <operation source="field"
+                                   to="temp.s_m_Benelux_BBG_Cash_Balance_Report/inout/map_Benelux_AccountList">map_Benelux_AccountList</operation>
+                     </serviceOutput>
+                  </service>
+                  <flow id="m3gymk9p">
+                     <service id="m3gymk9w">
+                        <title>PostSessionSuccessEmail_s_m_Benelux_BBG_Cash_Balance_Report</title>
+                        <serviceName>emailNotificationService</serviceName>
+                        <serviceGUID/>
+                        <serviceInput>
+                           <parameter name="Email To" source="constant">{$input.wkfp_Email} </parameter>
+                           <parameter name="Email Cc" source="constant"/>
+                           <parameter name="Email Subject" source="constant">Benelux_BBG_Cash_Balance_Report </parameter>
+                           <parameter name="Email Content Type" source="constant">text</parameter>
+                           <parameter name="Email Body" source="constant">Hi,&#xD;
+&#xD;
+Please find Benelux_BBG_Cash_Balance_Report in attachment.&#xD;
+&#xD;
+ %a&lt;{$input.wkfp_TgtFile_Path}/Benelux_BBG_Cash_Balance_Report.csv&gt; </parameter>
+                        </serviceInput>
+                        <serviceOutput/>
+                     </service>
+                     <link id="m3gymk9q" targetId="m3gymk9a" type="containerLink"/>
+                  </flow>
+                  <link id="m3gymk9o" targetId="c"/>
+                  <link id="m3gymk9r" targetId="m3gymk9p" type="containerLink"/>
+                  <events>
+                     <catch faultField="temp.s_m_Benelux_BBG_Cash_Balance_Report/fault"
+                            id="m3gymk9c"
+                            interrupting="true"
+                            name="error"/>
+                     <catch faultField="temp.s_m_Benelux_BBG_Cash_Balance_Report/fault"
+                            id="m3gymk9d"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              xmlns:processObject="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="s-m-Benelux-BBG-Cash-Balance-Report"
+                              isByCopy="true"
+                              name="s-m-Benelux-BBG-Cash-Balance-Report">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Input Parameters" name="input" type="reference"/>
+                     <field label="InOut Parameters" name="inout" type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            type="reference"/>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>auovSgcFEaHfNCS11JNEOr</types1:GUID>
+      <types1:DisplayName>wkf_Benelux_BBG_Cash_Balance_Report</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2026-11-13T05:36:10.226Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
